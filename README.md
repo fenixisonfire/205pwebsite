@@ -1,4 +1,4 @@
-# 205pwebsite
+# COMP205P Final Project Website
 
 ## I've put the template in our google drives folder (Final Website Content).
 
