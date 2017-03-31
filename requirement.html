@@ -389,11 +389,9 @@
             <!-- Row -->
             <div class="row">
 
-                <hr class="mb-40" />
-
                 <!-- Col -->
 
-                <div class="col-sm-6 mb-40">
+                <div class="col-sm-8 mb-40">
 
                     <div>
                         The Design Guide is a means of unifying all design choices on the PEACH project. The website, for
@@ -416,14 +414,14 @@
 
                 <!-- Col -->
 
-                <div class="col-sm-6 mb-40">
+                <div class="col-sm-8 mb-40">
 
                     <div>
                         <h5 class="uppercase">Problem Definition:</h5>
                         <li>Developers use components or a framework incompatible with the rest of the PEACH project, leading to inability to integrate their work, therefore, inability to divide the whole project into sub-tasks which could be assigned to different teams.</li>
-                        <!--<br></br>-->
+                        <br>
                         <li>PEACH websites do not have a uniform look, leading to a more confusing user experience and less intuitive user interface requiring long learning process.</li>
-                        <!-- <br></br>-->
+                        <br>
                         <li>Developers are unsure of how to tackle the issue of data visualisation, for example what charts to use, and how to generate charts using React D3 (given how little documentation is in place).</li>
                     </div>
 
@@ -528,6 +526,50 @@
                 Gathering & Methods
             </h2>
 
+            <div>
+                <b>Elicitation</b>
+                <br>
+                The main method we employed was structured interview with the client. Due to the strict in-house nature of
+                our project, our client wanted the design guide to behave a certain way. Additionally, we also conducted
+                structured interviews with developers about what they would like to see in a design guide.
+                <br>
+
+                The reason that we predominantly used interviews for requirement elicitation is due to the limited scope
+                of participants within this project. While large scale questionnaire would certainly bring beneficial statistical
+                analysis to commercial products aimed at the masses, our project is more specialised and aims to cater the needs of
+                a small and dedicated group of peach developers. Thus we felt the best way for us to elicit requirements was to ask
+                our client on prepared questions ranging from topics such as UI and content. These conversations would be recorded
+                via Google Docs or otherwise and later refined into our requirement specification.
+
+                <br></br>
+                <b>Lab-sessions & Meetings</b>
+                <br>
+
+                We had discussions usually in the range of half an hour with the client almost every lab-session. During weekly
+                meetings we presented our work for the week and asked for what our client wanted to be improved upon. Often, this
+                was in the form of Bi-weekly sprints as it usually took us two weeks to implement a new feature or section of content.
+                We then would proceed to iterate through our design process and implement the newly requested features. We have also
+                arranged for private meetings with Navin, usually outside of UCL, where we could furthermore discuss about the
+                requirements of the project when the time given within lab sessions was insufficient.
+
+                <br></br>
+                <b>Interviews</b>
+                <br>
+
+                Prior to the interviews, we prepared questions, research and any sketches or implementation we had done to show
+                to our client. We understood the common belief that clients “do not know what they want until they see it”. Thus
+                we opted to use visual techniques such as sketches and demos to demonstrate our ideas. The ultimate goal was to
+                reach a common vision of the design guide between the client and us.
+
+                <br>
+
+                During the interviews, one of us would be in charge of documenting any vital information, one would be actively
+                engaged with the client while the last listened carefully for anything the others may have missed. We resolved
+                any miscommunications between us and the client by using sketches and diagrams. It was important for us to fully
+                understand our client’s perspective.
+
+            </div>
+
 
 
         </div>
@@ -574,6 +616,107 @@
             <h2 class="section-title align-left font-alt mb-70 mb-sm-40">
                 MoSCoW
             </h2>
+
+            <div class="container relative">
+
+                <!-- Row -->
+                <div class="row">
+
+                    <!-- Col -->
+
+                    <div class="col-sm-10 mb-xs-40">
+
+                        <!-- Toggle -->
+                        <dl class="toggle">
+                            <dt>
+                                <a href="">The Design Guide <b>must</b> follow professional medical User Interface guidelines:</a>
+                            </dt>
+                            <dd>
+                                Using the pre-existing Common User Interface guidelines, created by the NHS, we tailored pre-existing
+                                libraries of components and design specifications to fit the PEACH project. Colour schemes were modified
+                                to fit the most commonly used colour codes employed by the medical community. Detailed information regarding
+                                form and data entry, based on the CUI guidelines, was also written up within the components page.
+
+                            </dd>
+                            <dt>
+                                <a href="">The Design Guide <b>must</b> be of a professional standard:</a>
+                            </dt>
+                            <dd>
+                                Throughout the components library, given that it is open source, many of the component examples and labels were
+                                unprofessional. These were all tidied up. Following this, the components library was edited to give a PEACH look
+                                and feel. Finally, components we deemed to be superfluous to the project needs, such as Custom Drop-Down and Custom
+                                Styles were removed from the components page. This was because the team decided these components offered too much
+                                freedom to deviate from prescribed design guidelines on the site, standing in direct contention of the purpose of a design guide.
+                            </dd>
+                            <dt>
+                                <a href="">The Design Guide <b>must</b> contain code for PEACH components:</a>
+                            </dt>
+                            <dd>
+                                Within the first iteration (pure HTML and CSS) of the Design Guide, the team was unable to display the code of the React components.
+                                Following the decision to rebuild in React, this issue was resolved. We were also able to implement a live code editor, allowing users
+                                to edit the example components and see the results in real time. This was well received by the client.  Although we attempted to implement
+                                a similar system for the interactive D3.js examples, this was unsuccessful, we thus reverted to static code displays for this page.
+                            </dd>
+                            <dt>
+                                <a href="">The Design Guide <b>should</b> contain embedded component examples:</a>
+                            </dt>
+                            <dd>
+                                The Contents tab contains a list of interactive embedded components. At present, all components are default React Bootstrap
+                                components, however this will be updated when new custom PEACH components are developed.
+                            </dd>
+                            <dt>
+                                <a href="">The Design Guide <b>should</b> contain design element guidelines:</a>
+                            </dt>
+                            <dd>
+                                There currently exists no official guidance with regard to design for NHS websites. Furthermore, the client did not have a clear
+                                idea of what a PEACH site should look like. Upon the client’s suggestion, we therefore took a pre-existing design system (Lightning
+                                Design System) and ported the contents to the site, effectively acting as a placeholder. Again, this was edited to give a PEACH look
+                                and feel. Furthermore, sections we felt were not relevant to the project were removed.
+                            </dd>
+
+                            <dt>
+                                <a href="">The Design Guide <b>should</b> be scalable and compatible with mobile devices:</a>
+                            </dt>
+                            <dd>
+                                The site is fully scalable and compatible with mobile devices. Following the move from HTML and CSS, we were able to incorporate a
+                                React-Bootstrap framework to ensure the site is fully scalable and mobile compatible.
+                            </dd>
+                            <dt>
+                                <a href="">We <b>should</b> provide documentation on how to add/edit site contents:</a>
+                            </dt>
+                            <dd>
+                                The client wishes for to be able to edit certain portions of the site himself. Given that he is not familiar with React, and React
+                                sites tend to be more complex than traditional HTML/ CSS projects, we have written documentation describing which files are editable
+                                and how he can edit contents using only HTML and CSS.
+                            </dd>
+
+                            <dt>
+                                <a href="">The Design Guide <b>should</b> contain sidebar integration:</a>
+                            </dt>
+                            <dd>
+                                Each subpage within the Design Guide (D3, Design and Components) contains a "scrollspy" sidebar. This offers all the functionality of
+                                a traditional sidebar, whilst if the user chooses to scroll, the "scrollspy" keeps track of page location and marks it by highlighting
+                                the appropriate section on the sidebar.
+                            </dd>
+
+                            <dt>
+                                <a href="">The Design Guide <b>could</b> include D3 examples:</a>
+                            </dt>
+                            <dd>
+                                Later within the project, the client wished for us to display examples of D3 on the site. However, he was unsure of what form the
+                                examples should take. Accordingly, we decided to simply showcase some examples of interactive D3 charts that could be used in future
+                                PEACH projects, along with the accompanying code. This is in line with the Design Guide acting as the central reference point for all
+                                PEACH development, including not only design requirements and components, but also the necessary parts for data visualization.
+                            </dd>
+                        </dl>
+                        <!-- End Accordion -->
+
+                    </div>
+
+                </div>
+                <!-- End Row -->
+
+            </div>
 
 
 

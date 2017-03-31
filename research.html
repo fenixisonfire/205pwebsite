@@ -386,6 +386,62 @@
                 Platform, OS and Environment
             </h2>
 
+            <div class="container relative">
+
+                <!-- Row -->
+                <div class="row">
+
+                    <!-- Col -->
+
+                    <div class="col-sm-8 col-sm-offset-2">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs tpl-tabs animate">
+                            <li class="active">
+                                <a href="#one" data-toggle="tab">Platform</a>
+                            </li>
+                            <li>
+                                <a href="#two" data-toggle="tab">OS</a>
+                            </li>
+                            <li>
+                                <a href="#three" data-toggle="tab">Environment</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content tpl-tabs-cont section-text">
+                            <div class="tab-pane fade in active" id="one">
+                                Our project is mainly concerned with launching the Design Guide website. For our testing,
+                                we used localhost, specifically “localhost:4000”, which is the default port for a npm react web-application.
+                                Additionally, the application can be run using services similar to Azure by Microsoft or AWS by Amazon.
+                                However, the project cannot be deployed to GitHub pages, as it requires server-side compilation.
+                                The website does not require a database.
+                            </div>
+                            <div class="tab-pane fade" id="two">
+                                As the application is web-based, the execution of it runs only in browsers. As we have tested,
+                                all of the most commonly used browsers such as Internet Explorer, Google Chrome, Mozilla Firefox and Safari
+                                support our application. And as the browsers are added to almost any operating
+                                system (OS) by default, we can say that the project can be used under any OS. Moreover,
+                                all contents within the website such as Data Visualisation (D3) and Components are all optimised for different platforms.
+                            </div>
+                            <div class="tab-pane fade" id="three">
+                                As previously mentioned, the execution of our application locally or on a server can be done
+                                using Azure services,  AWS or other similar products, but not GitHub Pages. This is due to the
+                                fact that the project requires a set of commands to be run prior to opening the link. There are
+                                3 commands to install all the packages, and 1 command which should be run everytime the application
+                                is shut down.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- End Col -->
+
+                </div>
+                <!-- End Row -->
+
+            </div>
+
         </div>
     </section>
     <!-- End Platform, OS and Environment Section -->
@@ -485,13 +541,95 @@
                                 <a href="">React Playground</a>
                             </dt>
                             <dd>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.
+
+                                React Component Playground is a React component developed by Formidable, a Seattle based consultancy. It renders editable source code and a live preview of other React components. It essentially allows for the implementation of live code editors. [rp1]
+                                <br></br>
+
+                                <b>Key Features</b>
+                                <ul>
+                                    <li>Allows editing of source code to illustrate changes</li>
+                                    <li>Live preview of React components</li>
+                                </ul>
+
+                                <br>
+
+                                <b>Usage</b>
+                                <br>
+
+                                For the components page of the Design Guide, we will be able to use the functionality provided by React Component Playground to have live code editors embedded within the Components list, alongside each component example. This way, site users can edit source code on the fly and see the result rendered in real time. There is also the potential to use it within the D3 tab to embed editable charts.
+
+                                <br></br>
+
+                                <b>Advantages</b>
+                                <ul>
+                                    <li>OpenSource</li>
+                                    <li>Most widely used code editor for React sites</li>
+                                    <li>Well maintained by Formidable</li>
+                                </ul>
+
+                                <br>
+
+                                <b>Disadvantages</b>
+                                There remain a number of unresolved issues with the component, listed here. [rp2]
+
+                                <br></br>
+
+                                <b>Alternatives</b>
+                                <br>
+                                Upon research, there would appear to be little or no alternative than to use React-Component-Library to render a live preview of editable components and source code, however there are other React based playgrounds such as JSFiddle and RNPlay.
+
                             </dd>
                             <dt>
                                 <a href="">React-D3</a>
                             </dt>
                             <dd>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.
+
+                                React D3 is a plugin for the D3 library, built by LiJung Chi, that allows the use of React methods within the D3 API . The library is a collection of React components that can be used to create custom D3 charts in a modular fashion. The library also comes with a variety of D3 template charts pre-converted to React components, for those unfamiliar with D3 [rd1].
+                                <br></br>
+
+                                <b>Key Features</b>
+                                <ul>
+                                    <li>Many template charts, allows users unfamiliar with D3 to quickly implement visualisations.</li>
+                                    <li>Reusable modular React component library to create custom D3 charts.</li>
+                                    <li>Supports high level components which can be used to install and create a chart within a component
+                                        Utilizes power of D3 to automate scaling ranges, normalize data and construct legends.</li>
+                                </ul>
+
+                                <br>
+
+                                <b>Usage</b>
+                                <br>
+
+                                The library will be used to embed examples of D3 visualisations within the visualisations tab of the Design Guide. The examples will also have the accompanying React D3 code we used to implement them. As the majority of future PEACH development is to be done in React, we encourage the use of this library amongst all data visualisation teams.
+                                Advantages
+
+                                <br></br>
+
+                                <b>Advantages</b>
+                                <ul>
+                                    <li>OpenSource</li>
+                                    <li>Able to build custom D3 visualisations entirely using modular React components</li>
+                                    <li>Extensive list of template charts</li>
+                                </ul>
+
+                                <br>
+
+                                <b>Disadvantages</b>
+                                <ul>
+                                    <li>Modularity of components library means some customizations not possible[rd2]</li>
+                                    <li>Library not maintained</li>
+                                    <li>Not widely used</li>
+                                </ul>
+
+                                <br>
+
+                                <b>Alternatives</b>
+                                <br>
+                                The task of embedding D3 within React is a tricky one, and many libraries have been created to address this, however there remains no clear standard. A list of alternative libraries is found below:
+                                <li>React-D3-Library</li>
+                                <li>React-Faux-Dom</li>
+                                <br>
+
                             </dd>
                         </dl>
                         <!-- End Accordion -->
@@ -655,6 +793,81 @@
                 Summary of Decision
             </h2>
 
+            <!-- Features Grid -->
+            <div class="row multi-columns-row alt-features-grid">
+
+                <!-- Features Item -->
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="alt-features-item align-center">
+                        <div class="alt-features-icon">
+                            <span class="icon-genius"></span>
+                        </div>
+                        <h3 class="alt-features-title font-alt">React</h3>
+                        <div class="alt-features-descr align-left">
+                            The decision to use React to build the actual Design Guide came relatively late in the project.
+                            Having previously tried with various degrees of success to implement the components page purely
+                            using HTML and CSS, we realized that the system would run more smoothly if we built the site using
+                            a React framework. React is highly suited to handle the frequent state changes invoked by the components page.
+                        </div>
+                    </div>
+                </div>
+                <!-- End Features Item -->
+
+                <!-- Features Item -->
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="alt-features-item align-center">
+                        <div class="alt-features-icon">
+                            <span class="icon-desktop"></span>
+                        </div>
+                        <h3 class="alt-features-title font-alt">React Playground</h3>
+                        <div class="alt-features-descr align-left">
+                            There are a number of playground libraries built for React, however only React Components Playground
+                            offered the ability to live edit embedded React components. It efficiently uses React’s lightweight
+                            virtual DOM rendering system to handle live code editors. In our page, the result after editing an example
+                            component is instantaneous.
+                        </div>
+                    </div>
+                </div>
+                <!-- End Features Item -->
+
+                <!-- Features Item -->
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="alt-features-item align-center">
+                        <div class="alt-features-icon">
+                            <span class="icon-bargraph"></span>
+                        </div>
+                        <h3 class="alt-features-title font-alt">React D3</h3>
+                        <div class="alt-features-descr align-left">
+                            Given that D3 is the gold standard for data visualization, we needed to integrate it within our React
+                            site. However this is a notoriously tricky task. The React D3 library broke this problem down by
+                            offering React components which can be used to construct D3 graphs. This greatly smoothed the process
+                            of embedding D3 examples in our site. The library also came with a number of prebuilt template charts,
+                            which is highly useful for developers who are unfamiliar with D3.
+                        </div>
+                    </div>
+                </div>
+                <!-- End Features Item -->
+
+                <!-- Features Item -->
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="alt-features-item align-center">
+                        <div class="alt-features-icon">
+                            <span class="icon-camera"></span>
+                        </div>
+                        <h3 class="alt-features-title font-alt">D3</h3>
+                        <div class="alt-features-descr align-left">
+                            D3.js is to be used as it is it is the most customizable of any of the libraries researched,
+                            whilst it also allows for dynamic interactive data displays. It would have been preferential
+                            to be able to use N3 charts alongside D3 to allow further functionality, however given that all
+                            Peach teams have reached the unanimous decision to develop with React, rather than Angular, this is not a possibility.
+                        </div>
+                    </div>
+                </div>
+                <!-- End Features Item -->
+
+            </div>
+            <!-- End Features Grid -->
+
         </div>
     </section>
     <!-- End Summary of Decision Section -->
@@ -681,6 +894,12 @@
                 <li>[b2] Mark Otto, a. (2016). Bootstrap · The world's most popular mobile-first and responsive front-end framework.. [online] Getbootstrap.com. Available at: http://getbootstrap.com/ [Accessed 29 Mar. 2017]. </li>
                 <li>[b3] Digital Shore. (2016). Unsure About Bootstrap? Read these Pro's & Con's. [online] Available at: http://digitalshore.io/bootstrap-pros-cons/ [Accessed 29 Mar. 2017].</li>
                 <li>[b4] Mark Otto, a. (2016). Bootstrap. [online] Blog.getbootstrap.com. Available at: http://blog.getbootstrap.com/ [Accessed 29 Mar. 2017].</li>
+                <li>[rp1] Component Playground. (2017). Component Playground. [online] Available at: https://formidable.com/open-source/component-playground/ [Accessed 29 Mar. 2017].</li>
+                <li>[rp2] GitHub. (2017). FormidableLabs/component-playground. [online] Available at: https://github.com/FormidableLabs/component-playground/issues [Accessed 29 Mar. 2017].</li>
+                <li>[rd1] Reactd3.org. (2017). A Javascript Library For Building Composable And Declarative Charts | React-D3. [online] Available at: http://www.reactd3.org [Accessed 29 Mar. 2017].</li>
+                <li>[rd2] Oli.me.uk. (2017). D3 within React the right way | Oliver Caldwell's blog. [online] Available at: https://oli.me.uk/2015/09/09/d3-within-react-the-right-way/ [Accessed 29 Mar. 2017].</li>
+
+
             </ul>
 
         </div>
