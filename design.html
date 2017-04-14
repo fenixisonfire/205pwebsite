@@ -782,6 +782,128 @@
                 Implementation Details
             </h2>
 
+            <p class="hs-line-8">Content & Live Editor</p>
+            <p class="text-alt">
+                The code below shows an example of a content file. This one in particular is the button section of the
+                component page. All sections of the design guide follows this format. The content is exported as a render
+                function and rendered on their respective pages. React Playground was used to allow easy integration of
+                our live editing feature.
+            </p>
+
+            <div><pre class="prettyprint linenums">
+                export default function ButtonSection() {
+                      return (
+                        &lt;div className=&quot;bs-docs-section&quot;&gt;
+                            &lt;br&gt;&lt;/br&gt;
+                                &lt;p&gt;&lt;strong&gt;N.B. This page is incomplete.&lt;/strong&gt; As more PEACH components are developed, they will be added to the site.&lt;/p&gt;&lt;br&gt;&lt;/br&gt;
+                          &lt;h1 className=&quot;page-header&quot;&gt;
+                            &lt;Anchor id=&quot;buttons&quot;&gt;Buttons&lt;/Anchor&gt; &lt;small&gt;Button&lt;/small&gt;
+                          &lt;/h1&gt;
+
+                          &lt;h3&gt;&lt;Anchor id=&quot;buttons-options&quot;&gt;Options&lt;/Anchor&gt;&lt;/h3&gt;
+                            &lt;p&gt;Use any of the available button style types to quickly create a styled button. Just modify the &lt;code&gt;bsStyle&lt;/code&gt; prop.&lt;br&gt;&lt;/br&gt;The following buttons display what colour should be used for what purpose, according to PEACH design guidelines&lt;/p&gt;
+                          &lt;ReactPlayground codeText={Samples.ButtonTypes} /&gt;
+                          &lt;div className=&quot;bs-callout bs-callout-warning&quot;&gt;
+                            &lt;h4&gt;Button spacing&lt;/h4&gt;
+                            &lt;p&gt;React does not automatically create a newline between elements. Buttons on the same line are usually shown flush against one another. To preserve the spacing between multiple inline buttons, wrap your
+                            button group in &lt;code&gt;{&quot;&lt;ButtonToolbar /&gt;&quot;}&lt;/code&gt;.&lt;/p&gt;
+                          &lt;/div&gt;
+                            .
+                            .
+                            .
+            </pre></div>
+
+            <hr class="mt-30 mb-30 ">
+
+            <p class="hs-line-8">Content Render</p>
+            <p class="text-alt">
+                The code below shows the modular nature of the design guide. Specifically, this shows how the design
+                page renders the design overview section as well as the accessibility section. The rest of the sections
+                are not listed here but follow the same pattern. This allows the user to easily add or edit content
+                without affecting the infrastructure of the design guide.
+            </p>
+
+            <div><pre class="prettyprint linenums">
+                render() {
+                    return (
+                      &lt;div&gt;
+                        &lt;NavMain activePage=&quot;design&quot; /&gt;
+
+                        &lt;div ref=&quot;main&quot; className=&quot;container bs-docs-container&quot;&gt;
+                          &lt;div className=&quot;row&quot;&gt;
+                            &lt;div className=&quot;col-md-9&quot; role=&quot;main&quot;&gt;
+                              {this.renderScrollSpy(sections.overview)}
+                              &lt;DesignOverviewSection /&gt;
+
+                              {this.renderScrollSpy(sections.accessibility)}
+                              &lt;DesignAccessibilitySection /&gt;
+                            .
+                            .
+                            .
+                            &lt;/div&gt;
+                            .
+                            .
+                            .
+            </pre></div>
+
+            <hr class="mt-30 mb-30 ">
+
+            <p class="hs-line-8">Sidebar Implementation</p>
+            <p class="text-alt">
+                The code below shows the sidebar implementation on each page. Specifically, this code shows the sidebar
+                for the data visualisation page. The design page and the component page side bar navigation follows the
+                same format. This smart sidebar follows the user's view and highlights the current active section.
+            </p>
+
+            <div><pre class="prettyprint linenums">
+                &lt;div className=&quot;col-md-3 bs-docs-sidebar-holder&quot;&gt;
+                  &lt;AutoAffix
+                    viewportOffsetTop={20}
+                    container={this.getMain}
+                  &gt;
+                    &lt;div
+                      className=&quot;bs-docs-sidebar hidden-print&quot;
+                      role=&quot;complementary&quot;
+                    &gt;
+                      &lt;Nav
+                        className=&quot;bs-docs-sidenav&quot;
+                        activeHref={this.state.activeNavItemHref}
+                        onSelect={this.handleNavItemSelect}
+                      &gt;
+
+                        &lt;SubNav href={sections.datavisoverview} text=&quot;Overview&quot;&gt;
+                        &lt;/SubNav&gt;
+
+                        &lt;SubNav href={sections.datavisbasic} text=&quot;Basic Graphs&quot;&gt;
+                          &lt;NavItem href={sections.datavisbasicline}&gt;Basic Line&lt;/NavItem&gt;
+                          .
+                          .
+                          .
+                          &lt;NavItem href={sections.datavisbasicdonut}&gt;Basic Donut&lt;/NavItem&gt;
+                        &lt;/SubNav&gt;
+
+                        &lt;SubNav href={sections.datavistooltip} text=&quot;Tooltip Graphs&quot;&gt;
+                          &lt;NavItem href={sections.datavistooltipline}&gt;Tooltip Line&lt;/NavItem&gt;
+                          .
+                          .
+                          .
+                          &lt;NavItem href={sections.datavistooltippie}&gt;Tooltip Pie&lt;/NavItem&gt;
+                        &lt;/SubNav&gt;
+
+
+                      &lt;/Nav&gt;
+
+                      &lt;a className=&quot;back-to-top&quot; href=&quot;#top&quot;&gt;
+                        Back to top
+                      &lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/AutoAffix&gt;
+                &lt;/div&gt;
+            </pre></div>
+
+            <hr class="mt-30 mb-30 ">
+
+
         </div>
     </section>
     <!-- End Implementation Details Section -->

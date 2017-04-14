@@ -386,6 +386,70 @@
                 Unit and Integration Testing
             </h2>
 
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Col -->
+
+                <div class="col-sm-8 col-sm-offset-2">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs tpl-tabs animate">
+                        <li class="active">
+                            <a href="#one" data-toggle="tab">Unit Testing</a>
+                        </li>
+                        <li>
+                            <a href="#two" data-toggle="tab">Integration Testing</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content tpl-tabs-cont section-text">
+                        <div class="tab-pane fade in active" id="one">
+
+                            <div align="center">
+                                <img src="./images/testing/chaijs-img.png" class="img-responsive" >
+                            </div>
+
+                            <br></br>
+
+                            Unit tests specify and test one point of the contract of a single method within a class.
+                            The test input and output should have a very narrow and well defined scope. External
+                            interactions and dependencies that may be called by the method under test are stubbed
+                            or mocked. One of the most popular unit testing libraries for React applications is <b>Enzyme</b>.
+                            By using the shallow render method this allows us to render individual components for testing.
+                            Then using the ‘expect’ methods of the assertion library <b>Chai.js</b> to define the expected output,
+                            we can test if the component behaves in the expected way. Using these two libraries, we were
+                            able to test component behaviour. Our tests focused particularly on components involved in
+                            loading SVGs into the DOM, as these components often didn’t behave as expected on the first
+                            iteration.
+                        </div>
+                        <div class="tab-pane fade" id="two">
+
+                            <div align="center">
+                                <img src="./images/testing/selenium-img.png" class="img-responsive" alt="Cinque Terre">
+                            </div>
+
+                            <br></br>
+
+                            Integration tests are carried out to show that different parts of the system work together.
+                            Often integration tests cover the entire application. As an entirely front end based application,
+                            we felt that browser testing would be the most appropriate ways of carrying out integration tests.
+                            Rather than manually going through the site and hoping to find a bug, we incorporated <b>Selenium</b>,
+                            one of the most popular automated browser testing tools. With this we were able to determine
+                            that all site navigation functioned as intended, as well as test the use of the smart side bar.
+                            Unfortunately, we were unable to define tests for the more complex site behaviours such as the
+                            live code editor. Therefore tests of these features had to be carried out manually.
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- End Col -->
+
+            </div>
+            <!-- End Row -->
+
         </div>
     </section>
     <!-- End Unit and Integration Section -->
